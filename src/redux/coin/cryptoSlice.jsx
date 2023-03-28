@@ -1,14 +1,14 @@
-import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-const url = "https://api.coinstats.app/public/v1/coins";
+const url = 'https://api.coinstats.app/public/v1/coins';
 
 export const getCryptos = createAsyncThunk(
   'getCrypto/info',
-  async () => { 
+  async () => {
     const response = axios.get(url);
     return response.data.coins;
-  }
+  },
 );
 
 const initialState = {
@@ -30,9 +30,9 @@ const cryptoSlice = createSlice({
     }).addCase(getCryptos.rejected, (state, action) => {
       state.status = 'failed';
       state.error = action.error.message;
-    })
-  }
-})
+    });
+  },
+});
 
 export const cryptoCoinsAction = cryptoSlice.actions;
 export default cryptoSlice.reducer;

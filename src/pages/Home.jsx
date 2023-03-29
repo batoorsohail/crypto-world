@@ -1,7 +1,9 @@
-import React from 'react';
+import Coin from '../components/Coin';
 
 const Home = () => (
-  <div>Home</div>
+  <>
+    <Coin />
+  </>
 );
 
 export default Home;

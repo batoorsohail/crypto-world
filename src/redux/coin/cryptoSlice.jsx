@@ -1,38 +1,43 @@
+/* eslint-disable import/no-extraneous-dependencies */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const url = 'https://api.coinstats.app/public/v1/coins';
+const coinsUrl = 'https://api.coinstats.app/public/v1/coins';
 
-export const getCryptos = createAsyncThunk(
-  'getCrypto/info',
+export const getCryptoCoinsAsync = createAsyncThunk(
+  'cryptoCoins/getCryptoCoins',
   async () => {
-    const response = axios.get(url);
-    return response.data.coins;
+    const resp = await axios.get(coinsUrl);
+    return resp.data.coins;
   },
 );
 
-const initialState = {
-  cryptoCoins: [],
-  status: 'idle',
-  error: null,
-};
-
-const cryptoSlice = createSlice({
-  name: 'crypto',
-  initialState,
+const cryptoCoinsSlice = createSlice({
+  name: 'cryptoCoins',
+  initialState: {
+    cryptoCoins: [],
+    error: null,
+    status: 'idle',
+  },
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(getCryptos.pending, (state) => {
-      state.status = 'loading';
-    }).addCase(getCryptos.fulfilled, (state, action) => {
-      state.status = 'succeed';
-      state.dragonStore = action.payload;
-    }).addCase(getCryptos.rejected, (state, action) => {
-      state.status = 'failed';
-      state.error = action.error.message;
-    });
+    builder
+      .addCase(getCryptoCoinsAsync.pending, (state) => {
+        const tempState = state;
+        tempState.status = 'loading';
+      })
+      .addCase(getCryptoCoinsAsync.fulfilled, (state, actions) => {
+        const tempState = state;
+        tempState.status = 'succeed';
+        tempState.cryptoCoins = actions.payload;
+      })
+      .addCase(getCryptoCoinsAsync.rejected, (state, actions) => {
+        const tempState = state;
+        tempState.status = 'failed';
+        tempState.error = actions.error.message;
+      });
   },
 });
 
-export const cryptoCoinsAction = cryptoSlice.actions;
-export default cryptoSlice.reducer;
+export const cryptoCoinsActions = createAsyncThunk.actions;
+export default cryptoCoinsSlice.reducer;

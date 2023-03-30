@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { getCryptoCoinsAsync } from '../redux/coin/cryptoSlice';
 
 export default function Home() {
@@ -20,7 +20,7 @@ export default function Home() {
       {
         cryptoCoins.map((cryptoCoin) => (
           <article key={cryptoCoin.id}>
-            {/* <Link to={`touch-coin/details/${cryptoCoin.id}`}>Details</Link> */}
+            <Link to={`touch-coin/details/${cryptoCoin.id}`}>Details</Link>
             <img
               src={cryptoCoin.icon}
               alt={`${cryptoCoin.name}logo`}

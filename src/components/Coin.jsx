@@ -20,7 +20,7 @@ export default function Home() {
       {
         cryptoCoins.map((cryptoCoin) => (
           <article key={cryptoCoin.id}>
-            <Link to={`touch-coin/details/${cryptoCoin.id}`}>Details</Link>
+            <Link to={`crypto-world/details/${cryptoCoin.id}`}>Details</Link>
             <img
               src={cryptoCoin.icon}
               alt={`${cryptoCoin.name}logo`}

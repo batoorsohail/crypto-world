@@ -10,9 +10,12 @@ const Details = () => {
     <section>
       <article>
         <img src={cryptoCoin.icon} alt={cryptoCoin.icon} />
-        <h3>{cryptoCoin.name}</h3>
+        <h3>
+          {cryptoCoin.name}
+        </h3>
         <p>
-          Price:{cryptoCoin.price}
+          Price:
+          {cryptoCoin.price}
         </p>
         <h4>Price Changes</h4>
         <p>

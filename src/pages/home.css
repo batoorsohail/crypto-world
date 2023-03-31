@@ -13,7 +13,7 @@
   justify-content: space-between;
   align-items: center;
   height: 5vh;
-  background-color: #0077ff;
+  background-color: #07f;
   padding-right: 5%;
   padding-left: 5%;
 }
@@ -36,7 +36,7 @@ h1 {
   display: flex;
   justify-content: center;
   padding: 15px 0 15px 0;
-  background-color: #0077ff;
+  background-color: #07f;
 }
 
 input {
@@ -52,8 +52,8 @@ input {
 }
 
 .coins-container > :nth-child(4n+2),
-.coins-container > :nth-child(4n+3)  {
-  background-color: #0077ff;
+.coins-container > :nth-child(4n+3) {
+  background-color: #07f;
 }
 
 .coins-main-container {
@@ -99,6 +99,6 @@ input {
 
 @media screen and (min-width: 768px) {
   .coin-logo {
-    width: 10%; 
+    width: 10%;
   }
 }

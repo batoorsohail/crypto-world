@@ -6,7 +6,7 @@ exports[`Home component should match snapshot 1`] = `
     class="input-section"
   >
     <input
-      placeholder="Search"
+      placeholder="Search Crypto"
       type="text"
       value=""
     />

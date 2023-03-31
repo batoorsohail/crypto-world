@@ -6,6 +6,9 @@ const Details = () => {
   const { cryptoCoins } = useSelector((state) => state.cryptoCoins);
   const { id } = useParams();
   const cryptoCoin = cryptoCoins.find((item) => item.id === id);
+  if (!cryptoCoin) {
+    return <p>Please go back to the home page and choose coin</p>;
+  }
 
   return (
     <section className="details-section">

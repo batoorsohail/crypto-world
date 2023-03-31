@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home component should match snapshot 1`] = `
+<DocumentFragment>
+  <section
+    class="input-section"
+  >
+    <input
+      placeholder="Search"
+      type="text"
+      value=""
+    />
+  </section>
+  <section
+    class="coins-container"
+  />
+</DocumentFragment>
+`;

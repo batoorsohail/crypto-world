@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DetailsScreen renders correctly with valid coin 1`] = `
+<div>
+  <p>
+    Please go back to the home page and choose coin
+  </p>
+</div>
+`;

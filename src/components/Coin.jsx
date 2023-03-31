@@ -27,7 +27,7 @@ export default function Home() {
       <section className="input-section">
         <input
           type="text"
-          placeholder="Search"
+          placeholder="Search Crypto"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />

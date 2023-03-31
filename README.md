@@ -69,6 +69,7 @@ Project presentation will be coming soon.
 In order to run this project you need a Chrome, Safari or Mozilla browser
 
 ### Setup <a name="setup"></a>
+
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
@@ -93,12 +94,12 @@ Example commands:
 
 ```sh
   cd my-folder
-  git clone https://github.com/batoorsohail/book-store.git
+  git clone https://github.com/batoorsohail/crypto-world.git
 ```
 
 ### Install
 
-To clone this repo go to "https://github.com/batoorsohail/book-store"
+To clone this repo go to "https://github.com/batoorsohail/crypto-world"
 
 git clone your repo
 
@@ -134,7 +135,7 @@ Contributions, issues, and feature requests are welcome!
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank for Microverse to provide us learning materials, and **our** peers for helping us out to move forward.
+I would like to thank for Microverse to provide us learning materials and [Nelson Sakwa](https://www.behance.net/gallery/31579789/Ballhead-App-(Free-PSDs)) on Behance for the design.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

@@ -1,5 +1,6 @@
 import { useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
+import './details.css';
 
 const Details = () => {
   const { cryptoCoins } = useSelector((state) => state.cryptoCoins);
@@ -7,47 +8,46 @@ const Details = () => {
   const cryptoCoin = cryptoCoins.find((item) => item.id === id);
 
   return (
-    <section>
-      <article>
-        <img src={cryptoCoin.icon} alt={cryptoCoin.icon} />
-        <h3>
+    <section className="details-section">
+      <article className="main-details">
+        <img src={cryptoCoin.icon} alt={cryptoCoin.icon} className="coin-logo2" />
+        <h3 className="coin-name2">
           {cryptoCoin.name}
         </h3>
-        <p>
-          Price:
-          {cryptoCoin.price}
-        </p>
-        <h4>Price Changes</h4>
-        <p>
-          High:
-          {cryptoCoin.priceChange1h}
-        </p>
-        <p>
-          Diff:
-          {cryptoCoin.priceChange1h}
-        </p>
-        <p>
-          Low:
-          {cryptoCoin.priceChange1h}
-        </p>
       </article>
-      <article>
-        <h4>Market Info</h4>
-        <p>
+      <article className="details-info">
+        <h3 className="details-title">Details</h3>
+        <p className="details-text">
+          Price:
+          <span className="item-dt">{cryptoCoin.price}</span>
+        </p>
+        <p className="details-text">
+          High:
+          <span className="item-dt">{cryptoCoin.priceChange1h}</span>
+        </p>
+        <p className="details-text">
+          Diff:
+          <span className="item-dt">{cryptoCoin.priceChange1d}</span>
+        </p>
+        <p className="details-text">
+          Low:
+          <span className="item-dt">{cryptoCoin.priceChange1w}</span>
+        </p>
+        <p className="details-text">
           Total Supply:
-          {cryptoCoin.totalSupply}
+          <span className="item-dt">{cryptoCoin.totalSupply}</span>
         </p>
-        <p>
+        <p className="details-text">
           Available Supply:
-          {cryptoCoin.availableSupply}
+          <span className="item-dt">{cryptoCoin.availableSupply}</span>
         </p>
-        <p>
+        <p className="details-text">
           Market Cap:
-          {cryptoCoin.marketCap}
+          <span className="item-dt">{cryptoCoin.marketCap}</span>
         </p>
-        <p>
+        <p className="details-text">
           Volume:
-          {cryptoCoin.volume}
+          <span className="item-dt">{cryptoCoin.volume}</span>
         </p>
       </article>
     </section>

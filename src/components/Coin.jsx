@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { IoMdArrowRoundForward } from 'react-icons/io';
 import { getCryptoCoinsAsync } from '../redux/coin/cryptoSlice';
 
 export default function Home() {
@@ -23,7 +24,7 @@ export default function Home() {
 
   return (
     <>
-      <section>
+      <section className="input-section">
         <input
           type="text"
           placeholder="Search"
@@ -31,17 +32,20 @@ export default function Home() {
           onChange={(e) => setSearchQuery(e.target.value)}
         />
       </section>
-      <section>
+      <section className="coins-container">
         {
           searchCoins.map((cryptoCoin) => (
-            <article key={cryptoCoin.id}>
-              <Link to={`crypto-world/details/${cryptoCoin.id}`}>Details</Link>
+            <article key={cryptoCoin.id} className="coins-main-container">
+              <div className="details-icon-container">
+                <Link to={`crypto-world/details/${cryptoCoin.id}`}><IoMdArrowRoundForward className="icon icon-details" /></Link>
+              </div>
               <img
                 src={cryptoCoin.icon}
                 alt={`${cryptoCoin.name}logo`}
+                className="coin-logo"
               />
-              <h2>{cryptoCoin.name}</h2>
-              <span>{cryptoCoin.totalSupply}</span>
+              <h2 className="coin-name">{cryptoCoin.name}</h2>
+              <span className="coin-supply">{cryptoCoin.totalSupply}</span>
             </article>
           ))
         }

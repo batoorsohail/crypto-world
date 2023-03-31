@@ -1,7 +1,68 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400');
+
 * {
-  box-sizing: border-box;
-  list-style: none;
-  text-decoration: none;
   padding: 0;
   margin: 0;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'lato', sans-serif;
+}
+
+.details-section {
+  background-color: #0077ff;
+  height: 95vh;
+}
+
+.main-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #178fff;
+  width: 100%;
+}
+
+.coin-logo2 {
+  width: 30%;
+  height: 40%;
+  margin-top: 20px;
+}
+
+.coin-name2 {
+  font-size: 24px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.details-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.details-title {
+  background-color: #0077ff;
+  color: #fff;
+  font-size: 20px;
+  padding: 20px 0;
+}
+
+.details-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  background-color: #0077ff;
+  height: 5vh;
+  padding: 1vh 10%;
+}
+
+.details-text:nth-child(even) {
+  background-color: #178fff;
+}
+
+@media screen and (min-width: 768px) {
+  .coin-logo2 {
+    width: 8%; 
+  }
 }

@@ -24,7 +24,7 @@
   - [🙏 Acknowledgments ](#-acknowledgments-)
   - [📝 License ](#-license-)
 
-# 📖 Space Travelers' Hub Project <a name="about-project"></a>
+# 📖 Crypto World <a name="about-project"></a>
 
 **Crypto World is a react project that gets the data from the API and displays it**
 
